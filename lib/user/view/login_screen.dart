@@ -25,7 +25,7 @@ class _LoginScreenState extends State<LoginScreen> {
     final dio = Dio();
 
     final emulatorIp = '10.0.2.2:3000';
-    final simulatorIp = '127.0.0.1:3000';
+    final simulatorIp = '192.168.1.64:3000';
 
     final ip = Platform.isAndroid ? emulatorIp : simulatorIp;
 
@@ -69,7 +69,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     String token = stringToBase64.encode(rawString);
 
                     final resp = await dio.post(
-                      'http://$ip/auth/login',
+                      'http://$simulatorIp/auth/login',
                       options: Options(
                         headers: {
                           'authorization': 'Basic $token',
@@ -100,7 +100,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   onPressed: () async {
                     final refreshToken = '';
                     final resp = await dio.post(
-                      'http://$ip/auth/token',
+                      'http://$simulatorIp/auth/token',
                       options: Options(
                         headers: {
                           'authorization': 'Bearer $refreshToken',
