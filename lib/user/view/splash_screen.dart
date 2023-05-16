@@ -31,13 +31,13 @@ class _SplashScreenState extends State<SplashScreen> {
     if (refreshToken == null || accessToken == null) {
       Navigator.of(context).pushAndRemoveUntil(
           MaterialPageRoute(
-            builder: (_) => LoginScreen(),
+            builder: (_) => const LoginScreen(),
           ),
               (route) => false);
     } else {
       Navigator.of(context).pushAndRemoveUntil(
           MaterialPageRoute(
-            builder: (_) => RootTab(),
+            builder: (_) => const RootTab(),
           ),
               (route) => false);
     }
@@ -56,10 +56,10 @@ class _SplashScreenState extends State<SplashScreen> {
               'asset/img/logo/logo.png',
               width: MediaQuery.of(context).size.width / 2,
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
-            CircularProgressIndicator(
+            const CircularProgressIndicator(
               color: Colors.white,
             )
           ],

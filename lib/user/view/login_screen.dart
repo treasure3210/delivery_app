@@ -85,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (_) => RootTab(),
+                        builder: (_) => const RootTab(),
                       ),
                     );
                   },

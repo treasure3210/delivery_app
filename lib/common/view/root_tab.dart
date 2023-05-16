@@ -16,9 +16,6 @@ class _RootTabState extends State<RootTab> {
   Widget build(BuildContext context) {
     return DefaultLayout(
       title: 'Noobie Delivery',
-      child: Center(
-        child: Text('Root Tab'),
-      ),
       bottomNavigationBar: BottomNavigationBar(
         selectedItemColor: PRIMARY_COLOR,
         unselectedItemColor: BODY_TEXT_COLOR,
@@ -31,7 +28,7 @@ class _RootTabState extends State<RootTab> {
           });
         },
         currentIndex: index,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined),
             label: 'Home',
@@ -49,6 +46,9 @@ class _RootTabState extends State<RootTab> {
             label: 'Profile',
           ),
         ],
+      ),
+      child: const Center(
+        child: Text('Root Tab'),
       ),
     );
   }
