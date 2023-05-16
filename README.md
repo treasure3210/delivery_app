@@ -1,6 +1,6 @@
 # delivery_app
 
-A new Flutter project.
+A Delivery App (i.e. UberEats, Doordash, Skip the Dishes etc.) built with Flutter. Involves state management with Riverpod, Cache management, code generation, GoRouter, Auth etc.
 
 ## Getting Started
 
